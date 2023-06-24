@@ -1,0 +1,8 @@
+.persons{
+    border-bottom:2px solid black;
+    margin-top: 0.5rem;
+}
+main{
+    width:90vw;
+    margin:0 auto;
+}
