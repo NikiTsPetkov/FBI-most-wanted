@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void{
     this.fbi.getMostWanted().subscribe((res: any)=>{
       this.mostWanted = res.items;
-      console.log(res.items[0]);
+      // console.log(res.items[0]);
     })
   }
 }

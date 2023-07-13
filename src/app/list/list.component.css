@@ -1,0 +1,62 @@
+h1 {
+    text-align: center;
+  }
+  .persons {
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  img {
+    border-radius: 50%;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  main {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0.5rem;
+  }
+  p {
+    font-weight: bold;
+    text-align: center;
+  }
+  a {
+    padding: 15px 10px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  a:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    left: 40%;
+    top: -70%;
+  }
+  
+  a:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media only screen and (max-width: 600px) {
+    main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  

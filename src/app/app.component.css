@@ -1,8 +1,19 @@
-.persons{
-    border-bottom:2px solid black;
-    margin-top: 0.5rem;
-}
-main{
-    width:90vw;
-    margin:0 auto;
-}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  a {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+  }
+  a:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: 0.1s ease-in-out;
+  }

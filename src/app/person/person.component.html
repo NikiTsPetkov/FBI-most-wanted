@@ -1,0 +1,20 @@
+<div *ngIf="person" class="person">
+    <img *ngIf="person.images[1]" src="{{ person.images[1].thumb}}" alt="{{person.title}}" />
+    <h1>{{ person.title }}</h1>
+    <article>
+      <h3>The case:</h3>
+      <p>{{ person.description }}.</p>
+      <p *ngIf="person.details">{{ person.details | removeTags }}</p>
+      <h3>Phisical description:</h3>
+      <ul>
+        <li *ngIf="person.age_range">Age: {{ person.age_range }}</li>
+        <li *ngIf="person.eyes_raw">Eyes color: {{ person.eyes_raw }}</li>
+        <li *ngIf="person.hair_raw">Hair color: {{ person.hair_raw }}</li>
+        <li *ngIf="person.race_raw">Race: {{ person.race_raw }}</li>
+        <li *ngIf="person.remarks">Remarks: {{ person.remarks | removeTags }}</li>
+        <li *ngIf="person.sex">Sex: {{ person.sex }}</li>
+        <li *ngIf="person.weight">Weight: {{ person.weight }}</li>
+      </ul>
+    </article>
+  </div>
+  

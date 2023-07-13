@@ -1,12 +1,14 @@
-<h1>Most Wanted People</h1>
-<!-- <pre>{{mostWanted | json}}</pre> -->
-<main>
-<div class="persons" *ngFor='let wanted of mostWanted'>
-  <img src={{wanted.images[0].thumb}} alt="">
-  <p>{{wanted.title}}</p>
-  <p>{{wanted.subjects[0]}}</p>
-  <p *ngIf='wanted.details'>{{wanted.details | removeTags}}</p>
-  <p *ngIf='wanted.caution'>{{wanted.caution | removeTags}}</p>
-</div>
-</main>
+<nav>
+  <h1>Most Wanted FBI</h1>
+  <ul>
+    <li>
+      <a
+        routerLink="/list"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >List</a
+      >
+    </li>
+  </ul>
+</nav>
 <router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+<main>
+    <div class="persons" *ngFor="let wanted of mostWanted; let i = index">
+      <img src="{{ wanted.images[0].thumb }}" alt="" />
+      <a href="/person/{{ i }}" data-hover="click the name for details">{{
+        wanted.title | lowercase
+      }}</a>
+      <p>{{ wanted.subjects[0] }}</p>
+      <!-- <p *ngIf="wanted.details">{{ wanted.details | removeTags }}</p>
+        <p *ngIf="wanted.caution">{{ wanted.caution | removeTags }}</p> -->
+    </div>
+  </main>
